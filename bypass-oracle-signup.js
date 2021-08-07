@@ -11,7 +11,7 @@
 
 // This removes the disabled-class from the download links
 function remove_disable(e) {
-  e.classList = ["license-link", "icn-download"];  
+  e.setAttribute("href", e.getAttribute("data-file"));
 }
 
 document.querySelectorAll(".otable-w2 .license-link").forEach(remove_disable);
