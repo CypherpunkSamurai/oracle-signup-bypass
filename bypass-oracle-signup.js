@@ -10,6 +10,9 @@
 // ==/UserScript==
 
 // This removes the disabled-class from the download links
-document.querySelectorAll(".otable-w2 .license-link").forEach(e => {
-  e.classList = ["license-link" "icn-download"];
-});
+function remove_disable(e) {
+  e.classList = ["license-link", "icn-download"];  
+}
+
+document.querySelectorAll(".otable-w2 .license-link").forEach(remove_disable);
+
